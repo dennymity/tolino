@@ -5,11 +5,102 @@
 	<meta http-equiv="Refresh" content="100">
     <title>DennyMitY</title>
   </head>
-  <body>
-    <div><b>Das Wetter wird: schlecht</b></div>
-<a class="weatherwidget-io" href="https://forecast7.com/de/52d208d58/bunde/" data-label_1="BÜNDE" data-label_2="WEATHER" data-icons="Climacons" data-mode="Current" >BÜNDE WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
-  </body>
+<body>
+    <h2>Das Wetter Heute</h2>
+    <div id="container">
+        <!-- <div id="zeit">NO DATA</div> -->
+    <div style="display:flex">
+        5 Uhr: &nbsp; <div id="temperatur_5">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        6 Uhr: &nbsp; <div id="temperatur_6">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        7 Uhr: &nbsp; <div id="temperatur_7">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        8 Uhr: &nbsp; <div id="temperatur_8">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        9 Uhr: &nbsp; <div id="temperatur_9">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        10 Uhr: &nbsp; <div id="temperatur_10">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        11 Uhr: &nbsp; <div id="temperatur_11">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        12 Uhr: &nbsp; <div id="temperatur_12">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        13 Uhr: &nbsp; <div id="temperatur_13">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        14 Uhr: &nbsp; <div id="temperatur_14">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        15 Uhr: &nbsp; <div id="temperatur_15">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        16 Uhr: &nbsp; <div id="temperatur_16">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        17 Uhr: &nbsp; <div id="temperatur_17">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        18 Uhr: &nbsp; <div id="temperatur_18">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        19 Uhr: &nbsp; <div id="temperatur_19">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        20 Uhr: &nbsp; <div id="temperatur_20">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        21 Uhr: &nbsp; <div id="temperatur_21">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        22 Uhr: &nbsp; <div id="temperatur_22">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        23 Uhr: &nbsp; <div id="temperatur_23">NO DATA</div>
+    </div>
+    <div style="display:flex">
+        24 Uhr: &nbsp; <div id="temperatur_24">NO DATA</div>
+    </div>
+    </div>
+    <script>
+        var url = "https://api.open-meteo.com/v1/forecast?latitude=52.20&longitude=8.59&hourly=temperature_2m";
+
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            // document.getElementById('zeit').innerHTML = JSON.parse(xmlHttp.responseText).hourly.time[7];
+            document.getElementById('temperatur_5').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[5] + "°C";
+            document.getElementById('temperatur_6').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[6] + "°C";
+            document.getElementById('temperatur_7').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[7] + "°C";
+            document.getElementById('temperatur_8').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[8] + "°C";
+            document.getElementById('temperatur_9').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[9] + "°C";
+            document.getElementById('temperatur_10').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[10] + "°C";
+            document.getElementById('temperatur_11').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[11] + "°C";
+            document.getElementById('temperatur_12').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[12] + "°C";
+            document.getElementById('temperatur_13').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[13] + "°C";
+            document.getElementById('temperatur_14').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[14] + "°C";
+            document.getElementById('temperatur_15').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[15] + "°C";
+            document.getElementById('temperatur_16').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[16] + "°C";
+            document.getElementById('temperatur_17').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[17] + "°C";
+            document.getElementById('temperatur_18').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[18] + "°C";
+            document.getElementById('temperatur_19').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[19] + "°C";
+            document.getElementById('temperatur_20').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[20] + "°C";
+            document.getElementById('temperatur_21').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[21] + "°C";
+            document.getElementById('temperatur_22').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[22] + "°C";
+            document.getElementById('temperatur_23').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[23] + "°C";
+            document.getElementById('temperatur_24').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[24] + "°C";
+
+        }
+        xmlHttp.open("GET", url, true);
+        xmlHttp.send();
+    </script>
+</body>
 </html>
