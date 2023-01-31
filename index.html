@@ -77,7 +77,8 @@
         xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
             // document.getElementById('zeit').innerHTML = JSON.parse(xmlHttp.responseText).hourly.time[7];
-            document.getElementById('temperatur_5').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[5] + "°C";
+            var test = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[5] + "°C";
+            document.getElementById('temperatur_5').innerHTML = test;
             document.getElementById('temperatur_6').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[6] + "°C";
             document.getElementById('temperatur_7').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[7] + "°C";
             document.getElementById('temperatur_8').innerHTML = JSON.parse(xmlHttp.responseText).hourly.temperature_2m[8] + "°C";
